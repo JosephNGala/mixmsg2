@@ -11,6 +11,15 @@ let randomSelect = arrayLength => {
     return Math.floor(Math.random() * arrayLength);
 }
 
+for (let element in suspectedElements) {
+        let randomIndex = randomSelect(suspectedElements[element].length);
+            switch (element) {
+            case 'whoDoneIt':
+            accusation.push(`I accuse ${suspectedElements[element][randomIndex]},`); break;
+            case 'whereItDone':
+            accusation.push(`in the ${suspectedElements[element][randomIndex]},`); break;
+            case 'whatDoneIt':
+            accusation.push(`with the ${suspectedElements[element][randomIndex]}.`); break;
+        }
+    }
 
-console.log(suspectedElements);
-console.log(randomSelect(suspectedElements.whoDoneIt));
