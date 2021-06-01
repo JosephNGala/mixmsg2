@@ -6,5 +6,11 @@ const suspectedElements = {
     whereItDone: ['ballroom', 'billiard room', 'conservatory', 'dining room', 'hall', 'kitchen', 'library', 'lounge', 'study'],
     whatDoneIt: ['candlestick', 'knife', 'lead pipe', 'revolver', 'rope', 'wrench']
 };
+let accusation = [];
+let randomSelect = arrayLength => {
+    return Math.floor(Math.random() * arrayLength);
+}
 
-console.log(suspectedElements[5]);
+
+console.log(suspectedElements);
+console.log(randomSelect(suspectedElements.whoDoneIt));
